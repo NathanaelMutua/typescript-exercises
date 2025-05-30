@@ -5,8 +5,7 @@ These challenges are to help solidify understanding of TypeScript fundamentals â
 **Table of Contents**
 
 - [Variables, Data Types, Operators, String Concatenations, Functions and Scope](#variables-data-types-operators-string-concatenations-functions-and-scope)
-  - [Instructions](#instructions)
-    - [Pro Tips](#pro-tips)
+
   - [1. Return the Sum of Two Numbers](#1-return-the-sum-of-two-numbers)
   - [2. Convert Minutes into Seconds](#2-convert-minutes-into-seconds)
   - [3. Perimeter of a Rectangle](#3-perimeter-of-a-rectangle)
