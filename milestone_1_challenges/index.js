@@ -25,6 +25,18 @@ findPerimeter(6, 7); // 26
 findPerimeter(20, 10); // 60
 console.log("---------------------------");
 // Challenge:4 Check Negative
+var isNegative = function (value) {
+    var result = "";
+    if (value < 0) {
+        result = "true";
+    }
+    else {
+        result = "false";
+    }
+    console.log(result);
+};
+isNegative(-23);
+isNegative(55);
 console.log("---------------------------");
 // Challenge:5 Can I Drive
 console.log("---------------------------");
