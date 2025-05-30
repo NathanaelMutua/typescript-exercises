@@ -5,8 +5,7 @@ These challenges will help solidify understanding of basic data structures in Ja
 **Table of Contents** 
 
 - [Basic Data Structures](#basic-data-structures)
-  - [Instructions](#instructions)
-    - [Pro Tips](#pro-tips)
+
   - [1. Sum of Positives](#1-sum-of-positives)
   - [2. Find Maximum Value](#2-find-maximum-value)
   - [3. Election winner](#3-election-winner)
