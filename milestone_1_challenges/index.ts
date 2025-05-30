@@ -18,6 +18,9 @@ console.log(`Addition2: ${addition2(3,5)}`)
 console.log("---------------------------")
 // Challenge:2 Convert Minutes into Seconds
 
+function convert(min: number){ return min * 60};
+const minuteConversion  = convert(5);
+console.log(minuteConversion);  
 
 console.log("---------------------------")
 // Challenge:3 Perimeter of a Rectangle
