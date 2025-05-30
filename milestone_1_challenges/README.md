@@ -23,7 +23,7 @@ These challenges are to help solidify understanding of TypeScript fundamentals â
   - [14. Multiple Sum](#14-multiple-sum)
   - [15. Sum of Digits](#15-sum-of-digits)
 
-# Challenges:
+# Challenges:`
 
 ## 1. Return the Sum of Two Numbers
 
