@@ -83,7 +83,7 @@ function calculateBMI(weight, height) {
         category = "Normal weight";
     }
     else {
-        category = "Underwight";
+        category = "Underweight";
     }
     console.log("Your BMI id ".concat(BMI, " - ").concat(category));
 }
@@ -113,7 +113,26 @@ greetUser("Amanda", 16);
 greetUser("Kalya", 20);
 greetUser("Ali", 23);
 console.log("---------------------------");
-// Challenge:9 FizzBuzz
+var fizzBuzzCheck = function (num) {
+    var result = "";
+    if (num % 3 === 0 && num % 5 === 0) {
+        result = "FizzBuzz";
+    }
+    else if (num % 3 === 0 && num % 5 != 0) {
+        result = "Fizz";
+    }
+    else if (num % 5 === 0 && num % 3 != 0) {
+        result = "Buzz";
+    }
+    else {
+        result = String(num);
+    }
+    return result;
+};
+console.log(fizzBuzzCheck(3)); // Fizz
+console.log(fizzBuzzCheck(10)); // Buzz
+console.log(fizzBuzzCheck(15)); // FizzBuzz
+console.log(fizzBuzzCheck(7)); // 7
 console.log("---------------------------");
 // Challenge:10 Perimeter 2
 console.log("---------------------------");

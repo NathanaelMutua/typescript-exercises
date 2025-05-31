@@ -98,7 +98,7 @@ function calculateBMI(weight: number, height: number) {
   } else if (BMI >= 18.5 && BMI <= 24.9) {
     category = "Normal weight";
   } else {
-    category = "Underwight";
+    category = "Underweight";
   }
   console.log(`Your BMI id ${BMI} - ${category}`);
 }
@@ -130,6 +130,26 @@ greetUser("Ali", 23);
 
 console.log("---------------------------");
 // Challenge:9 FizzBuzz
+
+type fizzBuzzOpp = (myNumber: number) => string;
+
+const fizzBuzzCheck: fizzBuzzOpp = function(num){
+    let result: string = "";
+    if (num % 3 === 0 && num % 5 === 0){
+        result = "FizzBuzz";
+    } else if (num % 3 === 0 && num % 5 != 0){
+        result = "Fizz";
+    } else if (num % 5 === 0 && num % 3 != 0){
+        result = "Buzz";
+    } else {
+        result = String(num);
+    }
+    return result
+}
+console.log(fizzBuzzCheck(3)); // Fizz
+console.log(fizzBuzzCheck(10)); // Buzz
+console.log(fizzBuzzCheck(15)); // FizzBuzz
+console.log(fizzBuzzCheck(7)); // 7
 
 console.log("---------------------------");
 // Challenge:10 Perimeter 2
