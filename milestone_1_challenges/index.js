@@ -11,14 +11,15 @@ var addition2 = function (number1, number2) {
 console.log("Addition2: ".concat(addition2(3, 5))); // 3 + 5 = 8
 console.log("---------------------------");
 // Challenge:2 Convert Minutes into Seconds
-function convert(min) { return min * 60; }
-;
+function convert(min) {
+    return min * 60;
+}
 var minuteConversion = convert(5);
 console.log(minuteConversion); // 5min * 60 = 300seconds
 console.log("---------------------------");
 // Challenge:3 Perimeter of a Rectangle
 var findPerimeter = function (length, width) {
-    var perimeter = (2 * (length + width));
+    var perimeter = 2 * (length + width);
     console.log(perimeter);
 };
 findPerimeter(6, 7); // 26
@@ -70,7 +71,7 @@ console.log("---------------------------");
 // Challenge:7 BMI Calculator
 // BMI = weight / (height * height)
 function calculateBMI(weight, height) {
-    var BMI = Math.floor((weight / (height * height)) * 10) / 10;
+    var BMI = Math.floor((weight / (height * height)) * 10) / 10; // this'll give me 1 decimal point numbers
     var category = "";
     if (BMI > 30) {
         category = "Obese";
@@ -90,6 +91,27 @@ calculateBMI(68, 1.75); //Your BMI is 22.2 - Normal weight
 calculateBMI(85, 1.8); // Your BMI is 26.2 - Overweight
 console.log("---------------------------");
 // Challenge:8 Greeting Based On Time
+var greetUser = function (name, hour) {
+    var greetingsArray = ["morning", "afternoon", "evening", "night"];
+    var greeting = "";
+    if (hour >= 5 && hour <= 11) {
+        greeting = greetingsArray[0];
+    }
+    else if (hour >= 12 && hour <= 17) {
+        greeting = greetingsArray[1];
+    }
+    else if (hour >= 18 && hour <= 21) {
+        greeting = greetingsArray[2];
+    }
+    else if (hour >= 22 && hour <= 24) {
+        greeting = greetingsArray[3];
+    }
+    console.log("Good ".concat(greeting, ", ").concat(name, "!"));
+};
+greetUser("Alice", 8);
+greetUser("Amanda", 16);
+greetUser("Kalya", 20);
+greetUser("Ali", 23);
 console.log("---------------------------");
 // Challenge:9 FizzBuzz
 console.log("---------------------------");

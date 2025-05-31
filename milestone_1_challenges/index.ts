@@ -108,6 +108,26 @@ calculateBMI(85, 1.8); // Your BMI is 26.2 - Overweight
 console.log("---------------------------");
 // Challenge:8 Greeting Based On Time
 
+const greetUser = function(name: string, hour: number){
+    let greetingsArray: string[] = ["morning", "afternoon", "evening", "night"];
+    let greeting: string = "";
+
+    if (hour >= 5 && hour <= 11){
+        greeting = greetingsArray[0];
+    } else if (hour >= 12 && hour <= 17){
+        greeting = greetingsArray[1];
+    } else if (hour >= 18 && hour <= 21){
+        greeting = greetingsArray[2];
+    } else if (hour >= 22 && hour <= 24){
+        greeting = greetingsArray[3]
+    }
+    console.log(`Good ${greeting}, ${name}!`)
+}
+greetUser("Alice", 8);
+greetUser("Amanda", 16);
+greetUser("Kalya", 20);
+greetUser("Ali", 23);
+
 console.log("---------------------------");
 // Challenge:9 FizzBuzz
 
