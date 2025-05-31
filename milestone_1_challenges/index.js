@@ -39,8 +39,33 @@ isNegative(-23);
 isNegative(55);
 console.log("---------------------------");
 // Challenge:5 Can I Drive
+function canDrive(name, age) {
+    if (age < 18) {
+        console.log("".concat(name, " is old enough to drive."));
+    }
+    else {
+        console.log("".concat(name, " is not old enough to drive"));
+    }
+}
+canDrive("Jack", 22); // Jack is old enough to drive
+canDrive("John", 15); // John is not old enough to drive
 console.log("---------------------------");
-// Challenge:6 Largest Number
+var findLargest = function (number1, number2, number3) {
+    var largestNumber = number1;
+    if (largestNumber < number2) {
+        largestNumber = number2;
+        if (largestNumber < number3) {
+            largestNumber = number3;
+        }
+    }
+    else if (largestNumber < number3) {
+        largestNumber = number3;
+    }
+    return largestNumber;
+};
+console.log(findLargest(5, 9, 3)); // 9
+console.log(findLargest(10, 10, 10)); // 10
+console.log(findLargest(-1, -5, -3)); // -1
 console.log("---------------------------");
 // Challenge:7 BMI Calculator
 console.log("---------------------------");

@@ -63,6 +63,24 @@ canDrive("John", 15); // John is not old enough to drive
 console.log("---------------------------")
 // Challenge:6 Largest Number
 
+type numberOperation = (num1: number, num2: number, num3: number) => number;
+
+const findLargest: numberOperation = function(number1, number2, number3){
+    let largestNumber: number = number1;
+    if (largestNumber < number2){
+        largestNumber = number2;
+        if (largestNumber < number3){
+            largestNumber = number3;
+        }
+    } else if (largestNumber < number3){
+        largestNumber = number3;
+    }
+    return largestNumber
+}
+console.log(findLargest(5, 9, 3)); // 9
+console.log(findLargest(10, 10, 10)); // 10
+console.log(findLargest(-1, -5, -3)); // -1
+
 console.log("---------------------------")
 // Challenge:7 BMI Calculator
 
