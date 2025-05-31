@@ -68,6 +68,26 @@ console.log(findLargest(10, 10, 10)); // 10
 console.log(findLargest(-1, -5, -3)); // -1
 console.log("---------------------------");
 // Challenge:7 BMI Calculator
+// BMI = weight / (height * height)
+function calculateBMI(weight, height) {
+    var BMI = Math.floor((weight / (height * height)) * 10) / 10;
+    var category = "";
+    if (BMI > 30) {
+        category = "Obese";
+    }
+    else if (BMI >= 25 && BMI <= 29.9) {
+        category = "Overweight";
+    }
+    else if (BMI >= 18.5 && BMI <= 24.9) {
+        category = "Normal weight";
+    }
+    else {
+        category = "Underwight";
+    }
+    console.log("Your BMI id ".concat(BMI, " - ").concat(category));
+}
+calculateBMI(68, 1.75); //Your BMI is 22.2 - Normal weight
+calculateBMI(85, 1.8); // Your BMI is 26.2 - Overweight
 console.log("---------------------------");
 // Challenge:8 Greeting Based On Time
 console.log("---------------------------");
