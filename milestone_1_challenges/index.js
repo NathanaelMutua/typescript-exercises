@@ -135,6 +135,18 @@ console.log(fizzBuzzCheck(15)); // FizzBuzz
 console.log(fizzBuzzCheck(7)); // 7
 console.log("---------------------------");
 // Challenge:10 Perimeter 2
+function perimeter(letter, num) {
+    var perimeter = 0;
+    if (letter === "s") {
+        perimeter = num * 4; // the num will represent the length of one side
+    }
+    else if (letter === "c") {
+        perimeter = 6.28 * num; // the num will represent the radius
+    }
+    console.log(perimeter);
+}
+perimeter("s", 7); //28
+perimeter("c", 4); //25.12
 console.log("---------------------------");
 // Challenge:11 Sum of Even Numbers
 console.log("---------------------------");
