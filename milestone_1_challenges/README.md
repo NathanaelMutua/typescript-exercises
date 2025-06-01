@@ -206,11 +206,4 @@ Constraints:
 sumDigits(123);   // 6   (1 + 2 + 3)
 sumDigits(4567);  // 22  (4 + 5 + 6 + 7)
 sumDigits(0);     // 0
-
-**Hint:**
-- Use % (modulo) to get the last digit.
-- Use integer division (like `Math.floor(num / 10)`) to chop off the last digit.
-- Repeat until the number becomes 0.
-
-
 ```
