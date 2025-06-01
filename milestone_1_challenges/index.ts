@@ -243,3 +243,21 @@ console.log(sumMultiples(7, 5)); // 5
 
 console.log("---------------------------");
 // Challenge:15 Sum of Digits
+
+function sumDigits(num: number){
+  let numString: string = String(num);
+  let sum: number = 0;
+  let numValues: number [] = [];
+  for(let x of numString){
+    numValues.push(Number(x));
+  }
+
+  for(let i = 0; i < numValues.length; i++){
+    sum += numValues[i];
+  }
+
+  console.log(sum)
+}
+sumDigits(123);   // 6   (1 + 2 + 3)
+sumDigits(4567);  // 22  (4 + 5 + 6 + 7)
+sumDigits(0);     // 0
