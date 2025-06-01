@@ -224,5 +224,22 @@ factorial(6); // 720 (1 * 2 * 3 * 4 * 5 * 6)
 console.log("---------------------------");
 // Challenge:14 Multiple Sum
 
+type sumOperation = (x: number, y: number) => number;
+
+const sumMultiples: sumOperation = function(n, divisor){
+  let sum: number = 0;
+  if (n > 0){
+    for(let i = 0; i <= n; i++){
+      if (i % divisor === 0){
+        sum += i;
+      }
+    }
+  }
+  return sum
+}
+console.log(sumMultiples(10, 2)); // 30  (2 + 4 + 6 + 8 + 10)
+console.log(sumMultiples(15, 3)); // 45  (3 + 6 + 9 + 12 + 15)
+console.log(sumMultiples(7, 5)); // 5
+
 console.log("---------------------------");
 // Challenge:15 Sum of Digits

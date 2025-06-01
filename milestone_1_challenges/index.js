@@ -197,6 +197,19 @@ factorial(0); // 1
 factorial(4); // 24  (1 * 2 * 3 * 4)
 factorial(6); // 720 (1 * 2 * 3 * 4 * 5 * 6)
 console.log("---------------------------");
-// Challenge:14 Multiple Sum
+var sumMultiples = function (n, divisor) {
+    var sum = 0;
+    if (n > 0) {
+        for (var i = 0; i <= n; i++) {
+            if (i % divisor === 0) {
+                sum += i;
+            }
+        }
+    }
+    return sum;
+};
+console.log(sumMultiples(10, 2)); // 30  (2 + 4 + 6 + 8 + 10)
+console.log(sumMultiples(15, 3)); // 45  (3 + 6 + 9 + 12 + 15)
+console.log(sumMultiples(7, 5)); // 5
 console.log("---------------------------");
 // Challenge:15 Sum of Digits
