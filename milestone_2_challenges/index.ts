@@ -17,6 +17,20 @@ console.log(sumOfPositives([2, -2, -4, -20, 10, -8])); //12
 console.log("---------------------")
 // Challenge2: Find Maximum Value
 
+function findMax(array: number[]){
+    let maxNumber: number = array[0];
+    for (let i = 1; i < array.length; i++){
+        if (maxNumber < array[i]){
+            maxNumber = array[i];
+        } else {
+            continue
+        }
+    }
+    console.log(maxNumber);
+}
+findMax([3, 7, 2, 9, 5]);// returns: 9
+findMax([43, 3, 210, 90, 12, 20]); // returns: 210
+
 console.log("---------------------")
 // Challenge3: Election winner
 
