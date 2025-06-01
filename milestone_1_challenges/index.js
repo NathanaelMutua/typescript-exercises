@@ -163,6 +163,23 @@ sumEvenNumbers(10); // 30  (2 + 4 + 6 + 8 + 10)
 sumEvenNumbers(5); // 6   (2 + 4)
 console.log("---------------------------");
 // Challenge:12 Multiply by Itself
+var powerUp = function (num, times) {
+    var count = 1;
+    var result = num;
+    if (num === 0 || times === 0) {
+        console.log(1);
+        return;
+    }
+    do {
+        result *= num;
+        count += 1;
+    } while (count < times);
+    console.log(result);
+};
+powerUp(2, 3); // 8  (2 * 2 * 2)
+powerUp(5, 0); // 1  (anything to the zero power is 1)
+powerUp(3, 4); // 81 (3 * 3 * 3 * 3)
+powerUp(0, 1); // 1
 console.log("---------------------------");
 // Challenge:13 Factorial Calculator
 console.log("---------------------------");
