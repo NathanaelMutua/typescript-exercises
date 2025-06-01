@@ -1,6 +1,6 @@
 # Variables, Data Types, Operators, String Concatenations, Functions and Scope
 
-These challenges are to help solidify understanding of TypeScript fundamentals — from declaring variables and working with data types to mastering functions and scope.
+These challenges help solidify understanding of TypeScript fundamentals — from declaring variables and working with data types to mastering functions and scope.
 
 **Table of Contents**
 
@@ -22,7 +22,7 @@ These challenges are to help solidify understanding of TypeScript fundamentals �
   - [14. Multiple Sum](#14-multiple-sum)
   - [15. Sum of Digits](#15-sum-of-digits)
 
-# Challenges:`
+# Challenges:
 
 ## 1. Return the Sum of Two Numbers
 
@@ -35,7 +35,7 @@ addition(-6, 9); // 3
 
 ## 2. Convert Minutes into Seconds
 
-Write a function called `convert` that takes an integer minutes and converts it to seconds.
+Write a function called `convert` that takes an integer in minutes and converts it to seconds.
 
 ```ts
 convert(5); // 300
@@ -106,7 +106,7 @@ calculateBMI(85, 1.8); // Your BMI is 26.2 - Overweight
 
 ## 8. Greeting Based On Time
 
-Write a function called `greetUser(name, hour)` that returns a personalized greeting based on the hour of the day.
+Write a function called `greetUser(name, hour)` that returns a personalised greeting based on the hour of the day.
 
 - The `name` is a string representing the user's name.
 - The `hour` is a number from 0 to 23, representing the current hour in 24-hour format.
@@ -175,7 +175,7 @@ powerUp(0); // 1
 ## 13. Factorial Calculator
 
 Write a function called `factorial(n)` that takes a non-negative integer n and returns the factorial of `n` — that’s the product of all positive integers from 1 up to n.
-By definition, factorial of 0 is 1.
+By definition, the factorial of 0 is 1.
 
 ```ts
 factorial(0); // 1
