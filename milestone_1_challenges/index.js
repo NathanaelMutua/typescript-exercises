@@ -149,6 +149,18 @@ perimeter("s", 7); //28
 perimeter("c", 4); //25.12
 console.log("---------------------------");
 // Challenge:11 Sum of Even Numbers
+function sumEvenNumbers(n) {
+    var sum = 0;
+    for (var i = 0; i <= n; i++) {
+        if (i % 2 === 0) {
+            sum += i;
+        }
+    }
+    console.log(sum);
+}
+sumEvenNumbers(6); // 12  (2 + 4 + 6)
+sumEvenNumbers(10); // 30  (2 + 4 + 6 + 8 + 10)
+sumEvenNumbers(5); // 6   (2 + 4)
 console.log("---------------------------");
 // Challenge:12 Multiply by Itself
 console.log("---------------------------");
