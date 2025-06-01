@@ -182,6 +182,20 @@ powerUp(3, 4); // 81 (3 * 3 * 3 * 3)
 powerUp(0, 1); // 1
 console.log("---------------------------");
 // Challenge:13 Factorial Calculator
+function factorial(n) {
+    var count = 1;
+    var factorialValue = 1;
+    if (n > -1) {
+        do {
+            factorialValue *= count;
+            count++;
+        } while (count <= n);
+    }
+    console.log(factorialValue);
+}
+factorial(0); // 1
+factorial(4); // 24  (1 * 2 * 3 * 4)
+factorial(6); // 720 (1 * 2 * 3 * 4 * 5 * 6)
 console.log("---------------------------");
 // Challenge:14 Multiple Sum
 console.log("---------------------------");
