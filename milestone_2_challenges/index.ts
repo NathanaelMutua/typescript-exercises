@@ -34,6 +34,26 @@ findMax([43, 3, 210, 90, 12, 20]); // returns: 210
 console.log("---------------------")
 // Challenge3: Election winner
 
+type Candidate = {name: string, votes: number};
+
+let findWinner = function(array: Candidate[]){
+    let winner = array[0];
+    let maxVotes: number = 0;
+    for (let i = 0; i < array.length; i++){
+        if (array[i].votes > maxVotes){
+            maxVotes = array[i].votes;
+            winner = array[i];
+        }
+    }
+    console.log(winner)
+}
+const candidates = [
+  { name: "Alice", votes: 50 },
+  { name: "Bob", votes: 75 },
+  { name: "Charlie", votes: 65 },
+];
+findWinner(candidates); // { name: "Bob", votes: 75 }
+
 console.log("---------------------")
 // Challenge4: Longest word
 
