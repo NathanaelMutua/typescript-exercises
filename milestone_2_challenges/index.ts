@@ -207,6 +207,18 @@ reverseLinearSearch([5, 3, 7, 1, 4], 10); // returns: -1
 console.log("---------------------");
 // Challenge13: Linear Search All Indices
 
+function linearSearchAll(array: number[], value: number){
+    let valueList: number []= [];
+    for (let i = 0; i < array.length; i++){
+        if (array[i] === value){
+            valueList.push(i);
+        }
+    }
+    console.log(valueList);
+}
+linearSearchAll([5, 3, 7, 1, 4, 7], 7); // returns: [2, 5]
+linearSearchAll([5, 3, 7, 1, 4], 10); // returns: []
+
 console.log("---------------------");
 // Challenge14: Count Occurrences
 
