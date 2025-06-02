@@ -222,57 +222,67 @@ linearSearchAll([5, 3, 7, 1, 4], 10); // returns: []
 console.log("---------------------");
 // Challenge14: Count Occurrences
 
-function countOccurrences(array: string[]){
-    const arrayValues = new Set(array);
-    const keyNamesArray = Array.from(arrayValues); // coz I realized sets don't have a .length property or indexing
-    let arrayValueIterations: { [key: string]: number } = {};
-    let count = 0;
-    for (let i = 0; i < keyNamesArray.length; i++){
-        for (let j = 0; j < array.length; j++){
-            if (array[j] == keyNamesArray[i]){
-                count += 1;
-            }
-        }
-        arrayValueIterations[keyNamesArray[i]] = count;
-        count = 0;
+function countOccurrences(arr: string[]): { [key: string]: number } {
+  let object: { [key: string]: number } = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    let item = arr[i];
+
+    if (object[item] === undefined) {
+      object[item] = 1;
+    } else {
+      object[item] += 1;
     }
-    console.log(arrayValueIterations)
+  }
+
+  return object;
 }
-countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"]) // returns: { apple: 3, banana: 2, orange: 1 }
+console.log(countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"])) // returns: { apple: 3, banana: 2, orange: 1 }
 
 console.log("---------------------");
 // Challenge15: Remove Duplicates
 
-function removeDuplicates(array: number[]): void {
-  const noDuplicatesArray: number[] = Array.from(new Set(array));
-  console.log(noDuplicatesArray);
+function removeDuplicates(array: (string | number)[]): (string | number)[] {
+  let newArray: { [key: string]: string | number } = {};
+  let result: (string | number)[] = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const key = array[i].toString();
+    if (!newArray.hasOwnProperty(key)) {
+      newArray[key] = array[i];
+      result.push(array[i]);
+    }
+  }
+
+  return result;
 }
+console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5]));// returns: [1, 2, 3, 4, 5]
 
 console.log("---------------------");
 // Challenge16: Most Frequent
 
-function mostFrequent<T>(array: T[]): T | undefined {
-  let mostOccuringCount = 0;
-  let mostOccuringValue: T | undefined;
-  const objectKeyNames = new Set(array);
-  const keyNamesArray = Array.from(objectKeyNames);
-  let count = 0;
+function mostFrequent(array: (string | number)[]): string | number | undefined {
+  const occurrences: { [key: string]: number } = {};
+  let count: number = 0;
+  let mostOccuringValue: string | number | undefined = undefined;
 
-  for (let i = 0; i < keyNamesArray.length; i++) {
-    for (let j = 0; j < array.length; j++) {
-      if (array[j] === keyNamesArray[i]) {
-        count += 1;
-      }
+  for (let i = 0; i < array.length; i++) {
+    const item = array[i];
+    const key = item.toString();
+
+    if (occurrences[key]) {
+      occurrences[key]++;
+    } else {
+      occurrences[key] = 1;
     }
-    if (count > mostOccuringCount) {
-      mostOccuringValue = keyNamesArray[i];
-      mostOccuringCount = count;
+
+    if (occurrences[key] > count) {
+      count = occurrences[key];
+      mostOccuringValue = item;
     }
-    count = 0; // Reset count for the next key
   }
 
-  console.log(mostOccuringValue);
-  return mostOccuringValue; // Optional: return the most occurring value
+  return mostOccuringValue;
 }
 mostFrequent([1, 2, 2, 3, 3, 3, 4]); // returns: 3
 mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"]); // returns: "apple"
