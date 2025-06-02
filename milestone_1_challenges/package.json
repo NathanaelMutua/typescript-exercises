@@ -4,7 +4,8 @@
   "description": "These challenges help solidify understanding of TypeScript fundamentals — from declaring variables and working with data types to mastering functions and scope.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",

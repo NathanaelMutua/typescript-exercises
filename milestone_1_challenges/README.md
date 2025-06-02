@@ -203,7 +203,7 @@ Constraints:
 - Use arithmetic operators and loops only.
 
 ```ts
-sumDigits(123);   // 6   (1 + 2 + 3)
-sumDigits(4567);  // 22  (4 + 5 + 6 + 7)
-sumDigits(0);     // 0
+sumDigits(123); // 6   (1 + 2 + 3)
+sumDigits(4567); // 22  (4 + 5 + 6 + 7)
+sumDigits(0); // 0
 ```

@@ -108,21 +108,21 @@ calculateBMI(85, 1.8); // Your BMI is 26.2 - Overweight
 console.log("---------------------------");
 // Challenge:8 Greeting Based On Time
 
-const greetUser = function(name: string, hour: number){
-    let greetingsArray: string[] = ["morning", "afternoon", "evening", "night"];
-    let greeting: string = "";
+const greetUser = function (name: string, hour: number) {
+  let greetingsArray: string[] = ["morning", "afternoon", "evening", "night"];
+  let greeting: string = "";
 
-    if (hour >= 5 && hour <= 11){
-        greeting = greetingsArray[0];
-    } else if (hour >= 12 && hour <= 17){
-        greeting = greetingsArray[1];
-    } else if (hour >= 18 && hour <= 21){
-        greeting = greetingsArray[2];
-    } else if (hour >= 22 && hour <= 24){
-        greeting = greetingsArray[3]
-    }
-    console.log(`Good ${greeting}, ${name}!`)
-}
+  if (hour >= 5 && hour <= 11) {
+    greeting = greetingsArray[0];
+  } else if (hour >= 12 && hour <= 17) {
+    greeting = greetingsArray[1];
+  } else if (hour >= 18 && hour <= 21) {
+    greeting = greetingsArray[2];
+  } else if (hour >= 22 && hour <= 24) {
+    greeting = greetingsArray[3];
+  }
+  console.log(`Good ${greeting}, ${name}!`);
+};
 greetUser("Alice", 8);
 greetUser("Amanda", 16);
 greetUser("Kalya", 20);
@@ -133,19 +133,19 @@ console.log("---------------------------");
 
 type fizzBuzzOpp = (myNumber: number) => string;
 
-const fizzBuzzCheck: fizzBuzzOpp = function(num){
-    let result: string = "";
-    if (num % 3 === 0 && num % 5 === 0){
-        result = "FizzBuzz";
-    } else if (num % 3 === 0 && num % 5 != 0){
-        result = "Fizz";
-    } else if (num % 5 === 0 && num % 3 != 0){
-        result = "Buzz";
-    } else {
-        result = String(num);
-    }
-    return result
-}
+const fizzBuzzCheck: fizzBuzzOpp = function (num) {
+  let result: string = "";
+  if (num % 3 === 0 && num % 5 === 0) {
+    result = "FizzBuzz";
+  } else if (num % 3 === 0 && num % 5 != 0) {
+    result = "Fizz";
+  } else if (num % 5 === 0 && num % 3 != 0) {
+    result = "Buzz";
+  } else {
+    result = String(num);
+  }
+  return result;
+};
 console.log(fizzBuzzCheck(3)); // Fizz
 console.log(fizzBuzzCheck(10)); // Buzz
 console.log(fizzBuzzCheck(15)); // FizzBuzz
@@ -154,14 +154,14 @@ console.log(fizzBuzzCheck(7)); // 7
 console.log("---------------------------");
 // Challenge:10 Perimeter 2
 
-function perimeter(letter: string, num: number){
-    let perimeter: number = 0;
-    if (letter === "s"){
-        perimeter = num*4; // the num will represent the length of one side
-    } else if (letter === "c"){
-        perimeter = 6.28 * num; // the num will represent the radius
-    }
-    console.log(perimeter);
+function perimeter(letter: string, num: number) {
+  let perimeter: number = 0;
+  if (letter === "s") {
+    perimeter = num * 4; // the num will represent the length of one side
+  } else if (letter === "c") {
+    perimeter = 6.28 * num; // the num will represent the radius
+  }
+  console.log(perimeter);
 }
 perimeter("s", 7); //28
 perimeter("c", 4); //25.12
@@ -169,14 +169,14 @@ perimeter("c", 4); //25.12
 console.log("---------------------------");
 // Challenge:11 Sum of Even Numbers
 
-function sumEvenNumbers(n: number){
+function sumEvenNumbers(n: number) {
   let sum: number = 0;
-  for (let i = 0; i <= n; i++){
-    if (i % 2 === 0){
+  for (let i = 0; i <= n; i++) {
+    if (i % 2 === 0) {
       sum += i;
     }
   }
-  console.log(sum)
+  console.log(sum);
 }
 sumEvenNumbers(6); // 12  (2 + 4 + 6)
 sumEvenNumbers(10); // 30  (2 + 4 + 6 + 8 + 10)
@@ -185,19 +185,19 @@ sumEvenNumbers(5); // 6   (2 + 4)
 console.log("---------------------------");
 // Challenge:12 Multiply by Itself
 
-const powerUp = function(num: number, times: number){
+const powerUp = function (num: number, times: number) {
   let count: number = 1;
   let result: number = num;
-  if (num === 0 || times === 0){
-    console.log(1)
-    return
+  if (num === 0 || times === 0) {
+    console.log(1);
+    return;
   }
-  do{
+  do {
     result *= num;
     count += 1;
   } while (count < times);
   console.log(result);
-}
+};
 powerUp(2, 3); // 8  (2 * 2 * 2)
 powerUp(5, 0); // 1  (anything to the zero power is 1)
 powerUp(3, 4); // 81 (3 * 3 * 3 * 3)
@@ -206,11 +206,11 @@ powerUp(0, 1); // 1
 console.log("---------------------------");
 // Challenge:13 Factorial Calculator
 
-function factorial(n: number){
+function factorial(n: number) {
   let count: number = 1;
   let factorialValue: number = 1;
-  if (n > -1){
-    do{
+  if (n > -1) {
+    do {
       factorialValue *= count;
       count++;
     } while (count <= n);
@@ -226,17 +226,17 @@ console.log("---------------------------");
 
 type sumOperation = (x: number, y: number) => number;
 
-const sumMultiples: sumOperation = function(n, divisor){
+const sumMultiples: sumOperation = function (n, divisor) {
   let sum: number = 0;
-  if (n > 0){
-    for(let i = 0; i <= n; i++){
-      if (i % divisor === 0){
+  if (n > 0) {
+    for (let i = 0; i <= n; i++) {
+      if (i % divisor === 0) {
         sum += i;
       }
     }
   }
-  return sum
-}
+  return sum;
+};
 console.log(sumMultiples(10, 2)); // 30  (2 + 4 + 6 + 8 + 10)
 console.log(sumMultiples(15, 3)); // 45  (3 + 6 + 9 + 12 + 15)
 console.log(sumMultiples(7, 5)); // 5
@@ -244,20 +244,20 @@ console.log(sumMultiples(7, 5)); // 5
 console.log("---------------------------");
 // Challenge:15 Sum of Digits
 
-function sumDigits(num: number){
+function sumDigits(num: number) {
   let numString: string = String(num);
   let sum: number = 0;
-  let numValues: number [] = [];
-  for(let x of numString){
+  let numValues: number[] = [];
+  for (let x of numString) {
     numValues.push(Number(x));
   }
 
-  for(let i = 0; i < numValues.length; i++){
+  for (let i = 0; i < numValues.length; i++) {
     sum += numValues[i];
   }
 
-  console.log(sum)
+  console.log(sum);
 }
-sumDigits(123);   // 6   (1 + 2 + 3)
-sumDigits(4567);  // 22  (4 + 5 + 6 + 7)
-sumDigits(0);     // 0
+sumDigits(123); // 6   (1 + 2 + 3)
+sumDigits(4567); // 22  (4 + 5 + 6 + 7)
+sumDigits(0); // 0
