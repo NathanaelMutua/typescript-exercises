@@ -191,6 +191,19 @@ linearSearch([5, 3, 7, 1, 4], 10); // returns: -1
 console.log("---------------------");
 // Challenge12: Reverse Linear Search
 
+function reverseLinearSearch(array: number[], value: number){
+    let result: number = -1;
+    for (let i = array.length;i > -1; i--){
+        if (array[i] === value){
+            result = i;
+            break
+        }
+    }
+    console.log(result);
+}
+reverseLinearSearch([5, 3, 7, 1, 4, 7], 7); // returns: 5
+reverseLinearSearch([5, 3, 7, 1, 4], 10); // returns: -1
+
 console.log("---------------------");
 // Challenge13: Linear Search All Indices
 
