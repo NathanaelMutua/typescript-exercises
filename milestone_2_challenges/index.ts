@@ -85,6 +85,19 @@ countProperties({ name: "Alice", age: 25, city: "Paris", address: "John's Cresce
 console.log("---------------------");
 // Challenge6: Filter by Length
 
+type lengthFunction = (array: string[], minLength: number) => string[]; //first time having a type signature output an array
+
+const filterByLength: lengthFunction = function(array, minLength){
+    let newArray: string[]= [];
+    for (let i = 0; i < array.length; i++){
+        if (array[i].length >= minLength){
+            newArray.push(array[i]);
+        }
+    }
+    return newArray
+}
+console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5)); // returns: ["giraffe", "hippo", "elephant"]
+
 console.log("---------------------");
 // Challenge7: Sum of Even Numbers
 
