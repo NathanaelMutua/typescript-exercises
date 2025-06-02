@@ -115,6 +115,24 @@ sumEvenNumbers([1, 2, 3, 4, 5, 6]); // returns: 12  // because 2 + 4 + 6 = 12
 console.log("---------------------");
 // Challenge8: Difference Between Sum of Even and Odd Numbers
 
+type differenceOperation = (array: number[]) => number;
+
+const differenceEvenOdd: differenceOperation = function(array){
+    let sumEven: number = 0;
+    let sumOdd: number = 0;
+
+    for (let i = 0; i < array.length; i++){
+        if (array[i] % 2 === 0){
+            sumEven += array[i];
+        } else {
+            sumOdd += array[i];
+        }
+
+    }
+    return (sumEven - sumOdd)
+}
+console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6])); // returns: 3  // (2 + 4 + 6) - (1 + 3 + 5) = 12 - 9 = 3
+
 console.log("---------------------");
 // Challenge9: Count Truthy
 
