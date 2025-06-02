@@ -222,8 +222,57 @@ linearSearchAll([5, 3, 7, 1, 4], 10); // returns: []
 console.log("---------------------");
 // Challenge14: Count Occurrences
 
+function countOccurrences(array: string[]){
+    const arrayValues = new Set(array);
+    const keyNamesArray = Array.from(arrayValues); // coz I realized sets don't have a .length property or indexing
+    let arrayValueIterations: { [key: string]: number } = {};
+    let count = 0;
+    for (let i = 0; i < keyNamesArray.length; i++){
+        for (let j = 0; j < array.length; j++){
+            if (array[j] == keyNamesArray[i]){
+                count += 1;
+            }
+        }
+        arrayValueIterations[keyNamesArray[i]] = count;
+        count = 0;
+    }
+    console.log(arrayValueIterations)
+}
+countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"]) // returns: { apple: 3, banana: 2, orange: 1 }
+
 console.log("---------------------");
 // Challenge15: Remove Duplicates
 
+function removeDuplicates(array: number[]): void {
+  const noDuplicatesArray: number[] = Array.from(new Set(array));
+  console.log(noDuplicatesArray);
+}
+
 console.log("---------------------");
 // Challenge16: Most Frequent
+
+function mostFrequent<T>(array: T[]): T | undefined {
+  let mostOccuringCount = 0;
+  let mostOccuringValue: T | undefined;
+  const objectKeyNames = new Set(array);
+  const keyNamesArray = Array.from(objectKeyNames);
+  let count = 0;
+
+  for (let i = 0; i < keyNamesArray.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      if (array[j] === keyNamesArray[i]) {
+        count += 1;
+      }
+    }
+    if (count > mostOccuringCount) {
+      mostOccuringValue = keyNamesArray[i];
+      mostOccuringCount = count;
+    }
+    count = 0; // Reset count for the next key
+  }
+
+  console.log(mostOccuringValue);
+  return mostOccuringValue; // Optional: return the most occurring value
+}
+mostFrequent([1, 2, 2, 3, 3, 3, 4]); // returns: 3
+mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"]); // returns: "apple"
