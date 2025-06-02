@@ -157,6 +157,22 @@ countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }); // returns: 2  // "
 console.log("---------------------");
 // Challenge10: Average of Numbers
 
+function average(array: number[]){
+    let sum: number = 0;
+    let average: number = 0;
+    if (array.length === 0){
+        average = 0;
+    } else {
+        for (let i = 0; i < array.length; i++){
+            sum += array[i];
+        }
+        average = sum / array.length;
+    }
+    console.log(average);
+}
+average([2, 4, 6, 8]); // returns: 5
+average([]); // returns: 0
+
 console.log("---------------------");
 // Challenge11: Linear Search
 
