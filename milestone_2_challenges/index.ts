@@ -176,6 +176,18 @@ average([]); // returns: 0
 console.log("---------------------");
 // Challenge11: Linear Search
 
+function linearSearch(array: number[], value: number){
+    let result: number = -1;
+    for (let i = 0; i < array.length; i++){
+        if (array[i] === value){
+            result = i;
+        }
+    }
+    console.log(result)
+}
+linearSearch([5, 3, 7, 1, 4], 7); // returns: 2
+linearSearch([5, 3, 7, 1, 4], 10); // returns: -1
+
 console.log("---------------------");
 // Challenge12: Reverse Linear Search
 
