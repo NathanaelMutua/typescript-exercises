@@ -101,7 +101,7 @@ console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5)); 
 console.log("---------------------");
 // Challenge7: Sum of Even Numbers
 
-function sumEvenNumbers(array: number[]){
+function sumEvenNumbers2(array: number[]){
     let sum: number = 0;
     for (let i = 0; i < array.length; i++){
         if (array[i] % 2 === 0){
@@ -110,7 +110,7 @@ function sumEvenNumbers(array: number[]){
     }
     console.log(sum);
 }
-sumEvenNumbers([1, 2, 3, 4, 5, 6]); // returns: 12  // because 2 + 4 + 6 = 12
+sumEvenNumbers2([1, 2, 3, 4, 5, 6]); // returns: 12  // because 2 + 4 + 6 = 12
 
 console.log("---------------------");
 // Challenge8: Difference Between Sum of Even and Odd Numbers
