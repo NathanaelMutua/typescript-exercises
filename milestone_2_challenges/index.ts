@@ -136,6 +136,24 @@ console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6])); // returns: 3  // (2 + 4 + 6
 console.log("---------------------");
 // Challenge9: Count Truthy
 
+function countTruthy(object: Record<string, any>){// first time using record, which specifies the type for the keys as string and the values as any
+    let truthyCount: number = 0;
+    let keysArray: string[] = Object.keys(object);
+
+    for (let i = 0; i < keysArray.length; i++){
+        let key = keysArray[i];
+        let keyValue =  object[key];
+        
+        if (keyValue === 0 || keyValue === null || keyValue === undefined || keyValue === "" || keyValue === false){
+            continue
+        } else {
+            truthyCount += 1;
+        }
+    }
+    console.log(truthyCount);
+}
+countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }); // returns: 2  // "hello" and 42 are truthy
+
 console.log("---------------------");
 // Challenge10: Average of Numbers
 
