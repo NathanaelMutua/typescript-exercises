@@ -249,7 +249,7 @@ function countOccurrences(array: string[]){
   let count: number = 0;
 
   for (let i = 0; i < keyNamesArray.length; i++){
-    for (let j = 0; i < array.length; i++){
+    for (let j = 0; j < array.length; j++){
       if(array[j] === keyNamesArray[i]){
         count += 1;
       }
@@ -264,21 +264,12 @@ console.log(
 ); // returns: { apple: 3, banana: 2, orange: 1 }
 
 console.log("---------------------");
-// Challenge15: Remove Duplicates //to be redone
+// Challenge15: Remove Duplicates
+function removeDuplicates(array: number[]): number[]{
+  let newSet = new Set(array);
+  let nonDuplicateArray: number[] = Array.from(newSet);
 
-function removeDuplicates(array: (string | number)[]): (string | number)[] {
-  let newArray: { [key: string]: string | number } = {};
-  let result: (string | number)[] = [];
-
-  for (let i = 0; i < array.length; i++) {
-    const key = array[i].toString();
-    if (!newArray.hasOwnProperty(key)) {
-      newArray[key] = array[i];
-      result.push(array[i]);
-    }
-  }
-
-  return result;
+  return nonDuplicateArray
 }
 console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5])); // returns: [1, 2, 3, 4, 5]
 
