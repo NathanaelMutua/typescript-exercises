@@ -240,22 +240,24 @@ linearSearchAll([5, 3, 7, 1, 4, 7], 7); // returns: [2, 5]
 linearSearchAll([5, 3, 7, 1, 4], 10); // returns: []
 
 console.log("---------------------");
-// Challenge14: Count Occurrences // to be redone
+// Challenge14: Count Occurrences 
 
-function countOccurrences(arr: string[]): { [key: string]: number } {
-  let object: { [key: string]: number } = {};
+function countOccurrences(array: string[]){
+  const objectKeyNames = new Set(array);
+  const keyNamesArray: string[] = Array.from(objectKeyNames);
+  let arrayValueIterations: {[key: string]: any} = new Object();
+  let count: number = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    let item = arr[i];
-
-    if (object[item] === undefined) {
-      object[item] = 1;
-    } else {
-      object[item] += 1;
+  for (let i = 0; i < keyNamesArray.length; i++){
+    for (let j = 0; i < array.length; i++){
+      if(array[j] === keyNamesArray[i]){
+        count += 1;
+      }
     }
+    arrayValueIterations[keyNamesArray[i]] = count;
+    count = 0;
   }
-
-  return object;
+  return arrayValueIterations
 }
 console.log(
   countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"])
@@ -286,7 +288,7 @@ console.log("---------------------");
 function mostFrequent(array: (string | number)[]): string | number | undefined {
   const occurrences: { [key: string]: number } = {};
   let count: number = 0;
-  let mostOccuringValue: string | number | undefined = undefined;
+  let mostOccurringValue: string | number | undefined = undefined;
 
   for (let i = 0; i < array.length; i++) {
     const item = array[i];
@@ -300,11 +302,11 @@ function mostFrequent(array: (string | number)[]): string | number | undefined {
 
     if (occurrences[key] > count) {
       count = occurrences[key];
-      mostOccuringValue = item;
+      mostOccurringValue = item;
     }
   }
 
-  return mostOccuringValue;
+  return mostOccurringValue;
 }
 mostFrequent([1, 2, 2, 3, 3, 3, 4]); // returns: 3
 mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"]); // returns: "apple"
