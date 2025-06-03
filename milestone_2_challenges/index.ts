@@ -276,28 +276,30 @@ console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5])); // returns: [1, 2, 3, 4, 5
 console.log("---------------------");
 // Challenge16: Most Frequent // to be redone
 
-function mostFrequent(array: (string | number)[]): string | number | undefined {
-  const occurrences: { [key: string]: number } = {};
+// used the function logic from Challenge 14
+function mostFrequent(array: (string | number)[]): string | number{
+  const objectKeyNames = new Set(array);
+  const keyNamesArray: (string | number)[] = Array.from(objectKeyNames);
+  let arrayValueIterations: {[key: string]: any} = new Object();
   let count: number = 0;
-  let mostOccurringValue: string | number | undefined = undefined;
+  let mostOccurringCount: number = 0;
+  let mostOccurringValue: (string | number) = "";
 
-  for (let i = 0; i < array.length; i++) {
-    const item = array[i];
-    const key = item.toString();
-
-    if (occurrences[key]) {
-      occurrences[key]++;
-    } else {
-      occurrences[key] = 1;
+  for (let i = 0; i < keyNamesArray.length; i++){
+    for (let j = 0; j < array.length; j++){
+      if(array[j] === keyNamesArray[i]){
+        count += 1;
+      }
+    }
+    arrayValueIterations[keyNamesArray[i]] = count;
+    if (mostOccurringCount < count){
+      mostOccurringCount = count;
+      mostOccurringValue = keyNamesArray[i]
     }
 
-    if (occurrences[key] > count) {
-      count = occurrences[key];
-      mostOccurringValue = item;
-    }
+    count = 0;
   }
-
-  return mostOccurringValue;
+  return mostOccurringValue
 }
-mostFrequent([1, 2, 2, 3, 3, 3, 4]); // returns: 3
-mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"]); // returns: "apple"
+console.log(mostFrequent([1, 2, 2, 3, 3, 3, 4])); // returns: 3
+console.log(mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"])); // returns: "apple"
